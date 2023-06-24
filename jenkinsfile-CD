@@ -1,4 +1,7 @@
 node {
+ stage('Checkout Git Repository') {
+            git branch: 'master', url: 'https://github.com/sejalmm06/Banking-and-Finance-Domain-project-finance-me.git'
+}
 stage('Run On Test Server') {
         ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', playbook: 'test-server-playbook.yml', inventory: 'hosts'
         
