@@ -21,4 +21,4 @@ stage('Run On Test Server') {
         ansiblePlaybook credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', playbook: 'prod-server-playbook.yml', inventory: 'servers_inventory'
     }
 }
-}
+
